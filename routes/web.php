@@ -6,6 +6,7 @@ use App\Models\Job;
 
 
 Route::view('/', 'home');
+Route:: view('/contact','contact');
 
 //Route::controller(JobsController::class)->group(function() {
 //    Route::get('/jobs', 'index');
@@ -17,11 +18,9 @@ Route::view('/', 'home');
 //    Route::delete('/jobs/{job}', 'destroy');
 //});
 
-Route::resource('jobs', JobsController::class, [
-    'except'=> ['edit']
-]);
+Route::resource('jobs', JobsController::class);
 
 
-Route:: view('/contact','contact');
+
 
 
